@@ -29,7 +29,7 @@ import Counter from './class-components/Counter'
        <div>
          {/* <Basic/> */}
          {/* <UsingProps name = "Salman"/> */}
-         <Counter/>
+         {/* <Counter/> */}
        </div>
      )
    }
