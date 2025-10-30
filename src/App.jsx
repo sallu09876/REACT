@@ -18,10 +18,15 @@
 // }
 
 // export default App
- import React, { Component } from 'react'
- import Basic from './class-components/basic'
+import React, { Component } from 'react'
+import Basic from './class-components/basic'
 import UsingProps from './class-components/UsingProps'
 import Counter from './class-components/Counter'
+import Mounting from './class-components/lifecycle-methods/Mounting'
+import Update from './class-components/lifecycle-methods/Update'
+import Counter_homework from './class-components/Counter_homework'
+import UnMount from './class-components/lifecycle-methods/UnMount'
+import Update_hw from './class-components/lifecycle-methods/Update_hw'
  
  export default class App extends Component {
    render() {
@@ -30,6 +35,11 @@ import Counter from './class-components/Counter'
          {/* <Basic/> */}
          {/* <UsingProps name = "Salman"/> */}
          {/* <Counter/> */}
+         {/* <Mounting/> */}
+         {/* <Update/> */}
+         {/* <Counter_homework/> */}
+         {/* <UnMount/> */}
+         {/* <Update_hw/> */}
        </div>
      )
    }
