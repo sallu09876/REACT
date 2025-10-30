@@ -27,6 +27,8 @@ import Update from './class-components/lifecycle-methods/Update'
 import Counter_homework from './class-components/Counter_homework'
 import UnMount from './class-components/lifecycle-methods/UnMount'
 import Update_hw from './class-components/lifecycle-methods/Update_hw'
+import ButtonUnMount from './class-components/lifecycle-methods/ButtonUnmount'
+import Timer from './class-components/lifecycle-methods/Timer'
  
  export default class App extends Component {
    render() {
@@ -40,6 +42,8 @@ import Update_hw from './class-components/lifecycle-methods/Update_hw'
          {/* <Counter_homework/> */}
          {/* <UnMount/> */}
          {/* <Update_hw/> */}
+         {/* <ButtonUnMount/> */}
+         <Timer/>
        </div>
      )
    }
