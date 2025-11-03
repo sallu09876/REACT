@@ -1,7 +1,12 @@
 
 import './App.css'
-import Timer from './functional-components/hooks/useEffect-Hook/Timer'
-import UserList from './functional-components/hooks/useEffect-Hook/UserList'
+// import Unmount from './functional-components/hooks/useEffect-Hook/life-cycle-methods/Unmount'
+// import Update from './functional-components/hooks/useEffect-Hook/life-cycle-methods/Update'
+// import Mount from './functional-components/hooks/useEffect-Hook/life-cycle-methods/Mount'
+// import ToggleButton from './functional-components/hooks/useState-Hook/ToggleButton'
+// import NameForm from './functional-components/hooks/useState-Hook/NameForm'
+// import Timer from './functional-components/hooks/useEffect-Hook/Timer'
+// import UserList from './functional-components/hooks/useEffect-Hook/UserList'
 // import Props from './functional-components/Props'
 // import State from './functional-components/State'
 // import State_hw from './functional-components/State_hw'
@@ -29,6 +34,11 @@ function App() {
       {/* ---hooks & lifecycle methods--- */}
       {/* <Timer/> */}
       {/* <UserList/> */}
+      {/* <NameForm/> */}
+      {/* <ToggleButton/> */}
+      {/* <Mount/> */}
+      {/* <Update/> */}
+      {/* <Unmount/> */}
     </>
   )
 }
