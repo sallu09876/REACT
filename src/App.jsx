@@ -1,5 +1,7 @@
 
 import './App.css'
+import Timer from './functional-components/hooks/useEffect-Hook/Timer'
+import UserList from './functional-components/hooks/useEffect-Hook/UserList'
 // import Props from './functional-components/Props'
 // import State from './functional-components/State'
 // import State_hw from './functional-components/State_hw'
@@ -24,6 +26,9 @@ function App() {
       {/* <State/> */}
       {/* <State_hw/> */}
       {/* <Props/> */}
+      {/* ---hooks & lifecycle methods--- */}
+      {/* <Timer/> */}
+      {/* <UserList/> */}
     </>
   )
 }
