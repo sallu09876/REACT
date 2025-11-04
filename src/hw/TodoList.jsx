@@ -25,12 +25,7 @@ function TodoList() {
                     <button onClick={() => dispatch({
                         type: 'DELETE_TODO', payload:
                             todo.id
-                    })}>
-
-                        �
-                        �
-
-                    </button>
+                    })}>✅</button>
                 </li>
             ))}
         </ul>
