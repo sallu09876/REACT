@@ -1,5 +1,9 @@
 
 import './App.css'
+// import { UserApiProvider } from './functional-components/hooks/useContext-Hook/user-list/UserApiContext'
+// import UserList from './functional-components/hooks/useContext-Hook/user-list/UserList'
+// import Home from './functional-components/hooks/useContext-Hook/dark&light-mode/Home'
+// import { ThemeProvider } from './functional-components/hooks/useContext-Hook/dark&light-mode/ThemeContext'
 // import Unmount from './functional-components/hooks/useEffect-Hook/life-cycle-methods/Unmount'
 // import Update from './functional-components/hooks/useEffect-Hook/life-cycle-methods/Update'
 // import Mount from './functional-components/hooks/useEffect-Hook/life-cycle-methods/Mount'
@@ -31,7 +35,8 @@ function App() {
       {/* <State/> */}
       {/* <State_hw/> */}
       {/* <Props/> */}
-      {/* ---hooks & lifecycle methods--- */}
+
+      {/* -----hooks & lifecycle methods----- */}
       {/* <Timer/> */}
       {/* <UserList/> */}
       {/* <NameForm/> */}
@@ -39,6 +44,14 @@ function App() {
       {/* <Mount/> */}
       {/* <Update/> */}
       {/* <Unmount/> */}
+
+      {/* -----usecontext hook----- */}
+      {/* <ThemeProvider>
+        <Home/>
+      </ThemeProvider> */}
+      {/* <UserApiProvider>
+        <UserList/>
+      </UserApiProvider> */}
     </>
   )
 }
