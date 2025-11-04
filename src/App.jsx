@@ -1,5 +1,8 @@
 
 import './App.css'
+// import AddTodo from './hw/AddTodo'
+// import { TodoProvider } from './hw/TodoContext'
+// import TodoList from './hw/TodoList'
 // import { UserApiProvider } from './functional-components/hooks/useContext-Hook/user-list/UserApiContext'
 // import UserList from './functional-components/hooks/useContext-Hook/user-list/UserList'
 // import Home from './functional-components/hooks/useContext-Hook/dark&light-mode/Home'
@@ -52,6 +55,14 @@ function App() {
       {/* <UserApiProvider>
         <UserList/>
       </UserApiProvider> */}
+      {/* -----hw----- */}
+      {/* <TodoProvider>
+        <div style={{ maxWidth: '400px', margin: '0 auto', padding: '20px' }}>
+          <h2>📝Todo App</h2>
+          <AddTodo/>
+          <TodoList/>
+        </div> 
+      </TodoProvider> */}
     </>
   )
 }
