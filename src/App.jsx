@@ -1,5 +1,8 @@
 
-import './App.css'
+// import { Link, Route, Routes } from 'react-router-dom'
+// import './App.css'
+// import Home from './react-router-dom/Home'
+// import About from './react-router-dom/About'
 // import AddTodo from './hw/AddTodo'
 // import { TodoProvider } from './hw/TodoContext'
 // import TodoList from './hw/TodoList'
@@ -22,6 +25,14 @@ import './App.css'
 // import Conditional from './embedding-expression/Conditional'
 // import RenderingLists from './embedding-expression/RenderingLists'
 // import Basics from './functional-components/basics'
+
+import Navbar from "./nested-routing/Navbar"
+
+
+// import { Route, Routes } from "react-router-dom"
+// import Product from "./dynamic-routing/Product"
+// import ProductDetailPage from "./dynamic-routing/ProductDetailPage"
+
 
 function App() {
 
@@ -55,6 +66,7 @@ function App() {
       {/* <UserApiProvider>
         <UserList/>
       </UserApiProvider> */}
+
       {/* -----hw----- */}
       {/* <TodoProvider>
         <div style={{ maxWidth: '400px', margin: '0 auto', padding: '20px' }}>
@@ -63,6 +75,29 @@ function App() {
           <TodoList/>
         </div> 
       </TodoProvider> */}
+
+      {/* -----1.react-router-dom----- */}
+      {/* ---basic--- */}
+      {/* <div>
+        <nav>
+          <Link to='/'>Home</Link> <br />
+          <Link to='/about'>About</Link>
+        </nav>
+      </div>
+
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/about' element={<About/>}/>
+      </Routes> */}
+
+      {/* -----2.dynamic routing----- */}
+      {/* <Routes>
+        <Route path="/" element={<Product/>}/>
+        <Route path="/products/:id" element={<ProductDetailPage/>}/>
+      </Routes> */}
+
+      {/* -----3.nested routing----- */}
+      <Navbar/>
     </>
   )
 }
