@@ -1,5 +1,8 @@
 
 // import { Link, Route, Routes } from 'react-router-dom'
+// import { Route, Routes } from 'react-router-dom'
+// import Home from "./nested-routing/pages/Home";
+// import About from "./nested-routing/pages/About";
 // import './App.css'
 // import Home from './react-router-dom/Home'
 // import About from './react-router-dom/About'
@@ -26,8 +29,13 @@
 // import RenderingLists from './embedding-expression/RenderingLists'
 // import Basics from './functional-components/basics'
 
-import Navbar from "./nested-routing/Navbar"
-
+// import Navbar from "./nested-routing/Navbar"
+// import Home from './nested-routing/pages/Home';
+// import About from './nested-routing/pages/About';
+// import Service from './nested-routing/pages/Service';
+// import WebDev from './nested-routing/service/WebDev';
+// import AppDev from './nested-routing/service/AppDev';
+// import Design from './nested-routing/service/Design';
 
 // import { Route, Routes } from "react-router-dom"
 // import Product from "./dynamic-routing/Product"
@@ -97,7 +105,19 @@ function App() {
       </Routes> */}
 
       {/* -----3.nested routing----- */}
-      <Navbar/>
+      {/* <Navbar/>
+      <div className="container-app">
+        <Routes>
+          <Route path='/' element={<Home/>}></Route>
+          <Route path='/about' element={<About/>}></Route> */}
+
+          {/* nested routing starts here */}
+          {/* <Route path='/service' element={<Service/>}></Route>
+          <Route path='/web-development' element={<WebDev/>}></Route>
+          <Route path='/app-development' element={<AppDev/>}></Route>
+          <Route path='/design' element={<Design/>}></Route>
+        </Routes>
+      </div> */}
     </>
   )
 }
