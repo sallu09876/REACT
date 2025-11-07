@@ -29,6 +29,11 @@
 // import RenderingLists from './embedding-expression/RenderingLists'
 // import Basics from './functional-components/basics'
 
+// import SimpleForm from "./form/SimpleForm"
+
+// import Items from "./react-keys/Items"
+// import RealWorld from "./react-keys/RealWorld"
+
 // import Navbar from "./nested-routing/Navbar"
 // import Home from './nested-routing/pages/Home';
 // import About from './nested-routing/pages/About';
@@ -119,6 +124,13 @@ function App() {
           </Route>
         </Routes>
       </div>  */}
+
+      {/* -----react keys----- */}
+      {/* <Items/> */}
+      {/* <RealWorld/> */}
+
+      {/* -----form----- */}
+      {/* <SimpleForm/> */}
     </>
   )
 }
