@@ -112,12 +112,13 @@ function App() {
           <Route path='/about' element={<About/>}></Route> */}
 
           {/* nested routing starts here */}
-          {/* <Route path='/service' element={<Service/>}></Route>
-          <Route path='/web-development' element={<WebDev/>}></Route>
-          <Route path='/app-development' element={<AppDev/>}></Route>
-          <Route path='/design' element={<Design/>}></Route>
+          {/* <Route path='/service' element={<Service/>}>
+          <Route path='web-development' element={<WebDev/>}/>
+          <Route path='app-development' element={<AppDev/>}/>
+          <Route path='design' element={<Design/>}/>
+          </Route>
         </Routes>
-      </div> */}
+      </div>  */}
     </>
   )
 }
