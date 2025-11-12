@@ -29,6 +29,9 @@
 // import RenderingLists from './embedding-expression/RenderingLists'
 // import Basics from './functional-components/basics'
 
+// import { Form } from "react-router-dom"
+// import Crud from "./local-storage/Crud"
+
 // import SimpleForm from "./form/SimpleForm"
 
 // import Items from "./react-keys/Items"
@@ -131,6 +134,10 @@ function App() {
 
       {/* -----form----- */}
       {/* <SimpleForm/> */}
+      {/* <Form/> */}
+
+      {/* Local storage */}
+      {/* <Crud/> */}
     </>
   )
 }
