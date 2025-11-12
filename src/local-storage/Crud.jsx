@@ -1,11 +1,11 @@
-import React, { use, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./crud.css";
 const Crud = () => {
     const [formData, setFormData] = useState({
         id: "",
         name: "",
         email: "",
-        age: "",
+        age: ""
     });
     const [users, setUsers] = useState([]);
     const [editMode, setEditMode] = useState(false);
@@ -20,7 +20,7 @@ const Crud = () => {
                 const parsedUser = JSON.parse(stored);
                 setUsers(parsedUser);
             } catch (error) {
-                console.error("Error parsinf data", error)
+                console.error("Error parsing data", error)
                 localStorage.removeItem("users") //clear corrupted data
             }
         }
@@ -70,31 +70,92 @@ const Crud = () => {
             setError(validationErrors);
             return;
         }
+
+        if (editMode) {
+            setUsers(users.map(user => user.id === formData.id ? formData : user));
+            setEditMode(false);
+        } else {
+            const newUser = { ...formData, id: Date.now().toString() };
+            setUsers([...users, newUser])
+        }
+        setFormData({
+            id: "",
+            name: "",
+            email: "",
+            age: ""
+        });
+
+        setError({});
+
     }
 
-    // if (editMode) {
-    // }
+    const handleEdit = (us) => {
+        setFormData(us);
+        setEditMode(false);
+    }
+
 
     return (
         <div className="formnew">
             <h1>React CRUD-Simple Form</h1>
-            <form >
+            <form onSubmit={handleSubmit}>
                 {/* name */}
                 <div>
-                    <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="your name" />
+                    <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="your name" />{error && <p style={{ color: 'red' }}>{error.name}</p>}
                 </div>
                 {/* email */}
                 <div>
-                    <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="email" />
+                    <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="email" />{error && <p style={{ color: 'red' }}>{error.email}</p>}
                 </div>
                 {/* age */}
                 <div>
-                    <input type="number" name="age" value={formData.age} onChange={handleChange} placeholder="age" />
+                    <input type="number" name="age" value={formData.age} onChange={handleChange} placeholder="age" />{error && <p style={{ color: 'red' }}>{error.age}</p>}
                 </div>
 
                 <button type="submit">{editMode ? 'Update User' : 'Add User'}</button>
+                {
+                    editMode && (
+                        <button type="button">Cancel</button>
+                    )
+                }
 
             </form>
+
+            <hr />
+
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' }}>
+                <h2>User List</h2>
+                {/* //clear data button */}
+            </div>
+
+            {users.length > 0 ? (
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Age</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {users.map(us => (
+                            <tr key={us.id}>
+                                <td>{us.name}</td>
+                                <td>{us.email}</td>
+                                <td>{us.age}</td>
+                                <td>
+                                    <button onClick={() => handleEdit(us)}>Edit</button>
+                                    <button style={{ marginLeft: '10px' }}>Delete</button>
+                                </td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            ) : (
+                <p>No users added yet !</p>
+            )}
+
         </div>
     )
 };
