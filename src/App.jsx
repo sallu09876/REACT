@@ -29,7 +29,7 @@
 // import RenderingLists from './embedding-expression/RenderingLists'
 // import Basics from './functional-components/basics'
 
-import Crud from "./local-storage/Crud"
+// import Crud from "./local-storage/Crud"
 
 // import { Form } from "react-router-dom"
 // import Crud from "./local-storage/Crud"
@@ -139,7 +139,7 @@ function App() {
       {/* <Form/> */}
 
       {/* Local storage */}
-      <Crud/>
+      {/* <Crud/> */}
     </>
   )
 }
