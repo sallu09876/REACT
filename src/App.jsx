@@ -29,6 +29,11 @@
 // import RenderingLists from './embedding-expression/RenderingLists'
 // import Basics from './functional-components/basics'
 
+import AxiosGet from "./axios/AxiosGet"
+
+// import AxiosPost from "./axios/AxiosPost"
+
+
 // import Crud from "./local-storage/Crud"
 
 // import { Form } from "react-router-dom"
@@ -138,8 +143,12 @@ function App() {
       {/* <SimpleForm/> */}
       {/* <Form/> */}
 
-      {/* Local storage */}
+      {/* ----Local storage----- */}
       {/* <Crud/> */}
+
+      {/* -----Axios----- */}
+      {/* <AxiosPost/> */}
+      {/* <AxiosGet/> */}
     </>
   )
 }
