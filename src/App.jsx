@@ -46,6 +46,12 @@
 // import { Route, Routes } from "react-router-dom"
 // import Product from "./dynamic-routing/Product"
 // import ProductDetailPage from "./dynamic-routing/ProductDetailPage"
+// import ProductCard from "./design/dynamic-routing-RW-eg/ProductPage"
+// import ProductPage from "./designs/dynamic-routing-example/ProductPage"
+
+import { Route, Routes } from "react-router-dom"
+import ProductPage from "./design/dynamic-routing-RW-eg/ProductPage"
+import ProductDetails from "./design/dynamic-routing-RW-eg/ProductDetails"
 
 
 function App() {
@@ -143,6 +149,13 @@ function App() {
       {/* -----Axios----- */}
       {/* <AxiosPost/> */}
       {/* <AxiosGet/> */}
+
+      {/* -----dynamic routing----- */}
+      {/* <ProductPage/> */}
+      <Routes>
+        <Route path="/" element={<ProductPage/>} />
+        <Route path="/product/:id" element={<ProductDetails/>}/>
+      </Routes>
     </>
   )
 }
