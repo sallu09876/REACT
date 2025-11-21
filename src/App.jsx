@@ -53,6 +53,9 @@
 // import { Route, Routes } from "react-router-dom"
 // import ProductPage from "./design/dynamic-routing-RW-eg/ProductPage"
 // import ProductDetails from "./design/dynamic-routing-RW-eg/ProductDetails"
+// import Child from "./functional-components/hooks/useCallBack-Hook/Child"
+// import Parent from "./functional-components/hooks/useCallBack-Hook/Parent"
+// import UseMemo from "./functional-components/hooks/useMemo-Hook/UseMemo"
 
 
 function App() {
@@ -96,6 +99,13 @@ function App() {
 
       {/* -----usereducer hook----- */}
       {/* <Counter/> */}
+
+      {/* -----usecallback hook----- */}
+      {/* <Parent/> */}
+      {/* <Child/> */}
+
+      {/* -----usememo hook----- */}
+      {/* <UseMemo/> */}
 
       {/* -----hw----- */}
       {/* <TodoProvider>
