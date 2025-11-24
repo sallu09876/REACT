@@ -37,17 +37,5 @@ export const products = [
         offer: 20,
         description: "This is a high quality women's heel perfect for Party Occasions.",
         gallery: [heel, heel2, heel3, heel1]
-    },
-    {
-        id: 3,
-        image: shoe1,
-        title: "Mens's Shoe1 DN 23x, New Product",
-        category: "LIFESTYLE",
-        Price: 3550,
-        oldPrice: 4999,
-        rating: 4,
-        offer: 21,
-        description: "This is a high quality men's shoe perfect for Running.",
-        gallery: [shoe1, shoe2, shoe3]
     }
 ]

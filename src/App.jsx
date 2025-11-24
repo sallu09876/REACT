@@ -51,11 +51,13 @@
 // import UseLayoutEffect from "./functional-components/hooks/useEffect-Hook/UseLayoutEffect"
 // import Counter from "./functional-components/hooks/useReducer-Hook/Counter"
 // import { Route, Routes } from "react-router-dom"
-// import ProductPage from "./design/dynamic-routing-RW-eg/ProductPage"
-// import ProductDetails from "./design/dynamic-routing-RW-eg/ProductDetails"
 // import Child from "./functional-components/hooks/useCallBack-Hook/Child"
 // import Parent from "./functional-components/hooks/useCallBack-Hook/Parent"
 // import UseMemo from "./functional-components/hooks/useMemo-Hook/UseMemo"
+
+import { Route, Routes } from "react-router-dom"
+import ProductPage from "./design/dynamic-routing-RW-eg/ProductPage"
+import ProductDetails from "./design/dynamic-routing-RW-eg/ProductDetails"
 
 
 function App() {
@@ -169,10 +171,10 @@ function App() {
 
       {/* -----dynamic routing----- */}
       {/* <ProductPage/> */}
-      {/* <Routes>
+      <Routes>
         <Route path="/" element={<ProductPage/>} />
         <Route path="/product/:id" element={<ProductDetails/>}/>
-      </Routes> */}
+      </Routes>
     </>
   )
 }

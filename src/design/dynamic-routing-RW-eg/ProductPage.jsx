@@ -12,7 +12,9 @@ const ProductPage = () => {
 
       <div className='products-grid'>
         {products.map((item) => (
-          <Link key={item.id} to={`/product/${item.id}`} >
+          <Link key={item.id} to={`/product/${item.id}`}
+            style={{ textDecoration: "none" }}
+          >
             <ProductCard product={item} />
           </Link>
         ))}
@@ -22,3 +24,5 @@ const ProductPage = () => {
 }
 
 export default ProductPage
+
+
