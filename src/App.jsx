@@ -57,9 +57,8 @@
 // import { Route, Routes } from "react-router-dom"
 // import ProductPage from "./design/dynamic-routing-RW-eg/ProductPage"
 // import ProductDetails from "./design/dynamic-routing-RW-eg/ProductDetails"
-
-import BasicHookForm from "./react-hook-form/BasicHookForm"
-import WorkForm from "./react-hook-form/WorkForm"
+// import BasicHookForm from "./react-hook-form/BasicHookForm"
+// import WorkForm from "./react-hook-form/WorkForm"
 
 
 function App() {
@@ -180,7 +179,7 @@ function App() {
 
       {/* react-hook-form */}
       {/* <BasicHookForm/> */}
-      <WorkForm/>
+      {/* <WorkForm/> */}
     </>
   )
 }
