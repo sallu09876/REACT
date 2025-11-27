@@ -1,51 +1,76 @@
-import React from 'react'
-import './yupform.css'
+import React, { useState } from 'react';
+import './yupform.css';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
-import * as yup from 'yup'; //validation library
+import * as yup from 'yup';
 
-//definiing the validation scheme
-const schema = yup.object().shape({
+// Validation Schema
+const schema = yup.object({
     name: yup.string().required("Name is required."),
-    email: yup.string.email('Invalid email').required('Email is required'),
-    age: yup.number().positive().integer().required('Age is required')
-})
+    email: yup.string().email("Invalid email").required("Email is required"),
+    age: yup
+        .number()
+        .typeError("Age must be a number")
+        .positive("Age must be positive")
+        .integer("Age must be an integer")
+        .required("Age is required"),
+});
 
 const YupForm = () => {
 
-    const { register, handleSubmit, formState: { errors }, reset } = useForm({ resolver: yupResolver(schema) });
+    const { register, handleSubmit, formState: { errors }, reset } =
+        useForm({ resolver: yupResolver(schema) });
+
+    const [alertMsg, setAlertMsg] = useState("");
+
+    const showAlert = (msg) => {
+        setAlertMsg(msg);
+
+        setTimeout(() => {
+            setAlertMsg("");
+        }, 2000);
+    };
 
     const onSubmit = (data) => {
         console.log(data);
+        showAlert("Form submitted successfully!");
         reset();
-    }
+    };
+
+    const handleReset = () => {
+        reset();
+        showAlert("Form reset successfully!");
+    };
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)}>
+        
+        <div className="form-wrapper">
 
-            <input
-                {...register("name")}
-                placeholder='Name'
-            />
-            <p>{errors.name?.message}</p>
+            {alertMsg && <div className="alert">{alertMsg}</div>}
 
-            <input
-                {...register("email")}
-                placeholder='Email'
-            />
-            <p>{errors.email?.message}</p>
+            <form onSubmit={handleSubmit(onSubmit)}>
 
-            <input
-                {...register("age")}
-                placeholder='Age'
-            />
-            <p>{errors.age?.message}</p>
+                <input {...register("name")} placeholder="Name" />
+                <p className="error-text">{errors.name?.message}</p>
 
-            <button type='submit'>Submit</button>
-            <button type='reset' onClick={() => reset()}>Reset</button>
+                <input {...register("email")} placeholder="Email" />
+                <p className="error-text">{errors.email?.message}</p>
 
-        </form>
-    )
-}
+                <input {...register("age")} placeholder="Age" />
+                <p className="error-text">{errors.age?.message}</p>
 
-export default YupForm
+                <div className="button-group">
+                    <button type="submit">Submit</button>
+                    <button type="button" className="reset-btn" onClick={handleReset}>
+                        Reset
+                    </button>
+                </div>
+
+            </form>
+        </div>
+
+
+    );
+};
+
+export default YupForm;

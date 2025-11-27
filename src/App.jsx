@@ -59,8 +59,7 @@
 // import ProductDetails from "./design/dynamic-routing-RW-eg/ProductDetails"
 // import BasicHookForm from "./react-hook-form/BasicHookForm"
 // import WorkForm from "./react-hook-form/WorkForm"
-
-import YupForm from "./form/yup-react-hook-form/YupForm"
+// import YupForm from "./form/yup-react-hook-form/YupForm"
 
 
 function App() {
@@ -182,7 +181,7 @@ function App() {
       {/* react-hook-form */}
       {/* <BasicHookForm/> */}
       {/* <WorkForm/> */}
-      <YupForm/>
+      {/* <YupForm/> */}
     </>
   )
 }
