@@ -61,6 +61,9 @@
 // import WorkForm from "./react-hook-form/WorkForm"
 // import YupForm from "./form/yup-react-hook-form/YupForm"
 
+import CartApp from "./functional-components/hooks/useContext-Hook/cartcontext/cart-components/CartApp"
+import ShoppingCart from "./functional-components/hooks/useReducer-Hook/cart-using-reducer/components/ShoppingCart"
+
 
 function App() {
 
@@ -103,6 +106,7 @@ function App() {
 
       {/* -----usereducer hook----- */}
       {/* <Counter/> */}
+      {/* <ShoppingCart/> */}
 
       {/* -----usecallback hook----- */}
       {/* <Parent/> */}
@@ -182,6 +186,8 @@ function App() {
       {/* <BasicHookForm/> */}
       {/* <WorkForm/> */}
       {/* <YupForm/> */}
+
+      <CartApp/>
     </>
   )
 }
