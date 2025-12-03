@@ -60,9 +60,8 @@
 // import BasicHookForm from "./react-hook-form/BasicHookForm"
 // import WorkForm from "./react-hook-form/WorkForm"
 // import YupForm from "./form/yup-react-hook-form/YupForm"
-
-import CartApp from "./functional-components/hooks/useContext-Hook/cartcontext/cart-components/CartApp"
-import ShoppingCart from "./functional-components/hooks/useReducer-Hook/cart-using-reducer/components/ShoppingCart"
+// import CartApp from "./functional-components/hooks/useContext-Hook/cartcontext/cart-components/CartApp"
+// import ShoppingCart from "./functional-components/hooks/useReducer-Hook/cart-using-reducer/components/ShoppingCart"
 
 
 function App() {
@@ -187,7 +186,7 @@ function App() {
       {/* <WorkForm/> */}
       {/* <YupForm/> */}
 
-      <CartApp/>
+      {/* <CartApp/> */}
     </>
   )
 }
