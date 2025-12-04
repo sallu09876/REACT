@@ -9,7 +9,7 @@ const TodoList = () => {
 
   return (
     <ul>
-      {todos.map((todo) => {
+      {todos.map((todo) => (
         <li key={todo.id} style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}>
           {todo.text}
           <button onClick={() => dispatch(toggleTodo(todo.id))}>
@@ -17,7 +17,7 @@ const TodoList = () => {
           </button>
           <button onClick={() => dispatch(deleteTodo(todo.id))}>Delete</button>
         </li>
-      })}
+      ))}
     </ul>
   )
 }

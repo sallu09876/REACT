@@ -63,6 +63,8 @@
 // import CartApp from "./functional-components/hooks/useContext-Hook/cartcontext/cart-components/CartApp"
 // import ShoppingCart from "./functional-components/hooks/useReducer-Hook/cart-using-reducer/components/ShoppingCart"
 
+import ReduxTodo from "./redux_todo/ReduxTodo"
+
 
 function App() {
 
@@ -187,6 +189,7 @@ function App() {
       {/* <YupForm/> */}
 
       {/* <CartApp/> */}
+      <ReduxTodo/>
     </>
   )
 }
