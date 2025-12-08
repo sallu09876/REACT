@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { fetchProducts } from '../slices/productSlice';
+import { addToCart } from '../slices/cartSlice';   // ✅ ADD THIS
 
 function ProductList() {
   const dispatch = useDispatch();
@@ -10,34 +11,37 @@ function ProductList() {
     dispatch(fetchProducts());
   }, [dispatch]);
 
-  if (loading) return <p>Loading Products...</p>;  // works if loading
-  if (error) return <p className='text-danger'>Error: {error}</p> // works if error
+  if (loading) return <p>Loading Products...</p>;
+  if (error) return <p className="text-danger">Error: {error}</p>;
 
   return (
     <div className="row">
       {items.map((product) => (
         <div className="col-md-4 mb-4" key={product.id}>
           <div className="card h-100">
-            <img src={product.thumbnail} alt={product.title}
-              className='card-img-top'
+            <img
+              src={product.thumbnail}
+              alt={product.title}
+              className="card-img-top"
               style={{ height: "200px", objectFit: "cover" }}
             />
             <div className="card-body">
               <h5 className="card-title">{product.title}</h5>
-              <p className="card-text">${product.price}</p>
+              <p className="card-text">₹{product.price}</p>
+
+              {/* ⭐ FIXED BUTTON */}
               <button
-                className='btn btn-primary'
-              // onClick={()=> dispatch(addToCart(product))}
+                className="btn btn-primary"
+                onClick={() => dispatch(addToCart(product))}  // ✅ WORKING
               >
                 Add to Cart
               </button>
             </div>
           </div>
-
         </div>
       ))}
     </div>
-  )
+  );
 }
 
-export default ProductList
+export default ProductList;
