@@ -63,7 +63,8 @@
 // import CartApp from "./functional-components/hooks/useContext-Hook/cartcontext/cart-components/CartApp"
 // import ShoppingCart from "./functional-components/hooks/useReducer-Hook/cart-using-reducer/components/ShoppingCart"
 // import ReduxTodo from "./redux_todo/ReduxTodo"
-import ShoppingApp from "./Shopping-Cart-Redux-Toolkit/components/ShoppingApp"
+// import ShoppingApp from "./Shopping-Cart-Redux-Toolkit/components/ShoppingApp"
+// import "./Shopping-Cart-Redux-Toolkit/styles/styles.css"
 
 
 function App() {
@@ -190,7 +191,7 @@ function App() {
 
       {/* <CartApp/> */}
       {/* <ReduxTodo/> */}
-      <ShoppingApp/>
+      {/* <ShoppingApp/> */}
     </>
   )
 }
