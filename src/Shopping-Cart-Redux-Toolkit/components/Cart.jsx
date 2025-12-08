@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { incrementQty, decrementQty, removeFromCart, clearCart } from "../redux/cartSlice";
+import { incrementQty, decrementQty, removeFromCart, clearCart } from "../slices/cartSlice";
 
 function Cart() {
   const cart = useSelector((state) => state.cart);
